@@ -276,6 +276,13 @@ export const EventNotificationDefaultProps = {
   alertColor: "bg-emerald-500",
 };
 
+/* Animated Image default Props */
+
+export const AnimatedImageDefaultProps = {
+  imageSrc: "./assets/EisWaffel-Illustration.webp",
+  alt: "Eis Waffel",
+};
+
 /* NavBarItem default Props */
 
 const defaultTextColors: TextColors = {

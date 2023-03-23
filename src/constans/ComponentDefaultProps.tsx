@@ -279,8 +279,10 @@ export const EventNotificationDefaultProps = {
 /* Animated Image default Props */
 
 export const AnimatedImageDefaultProps = {
-  imageSrc: "./assets/EisWaffel-Illustration.webp",
-  alt: "Eis Waffel",
+  image: {
+    imageSrc: "./assets/EisWaffel-Illustration.webp",
+    alt: "Eis Waffel",
+  },
 };
 
 /* NavBarItem default Props */

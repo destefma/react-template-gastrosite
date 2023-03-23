@@ -7,18 +7,14 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
+import { CustomImage } from "../../constans/ComponentTypes";
+import { AnimatedImageDefaultProps } from "../../constans/ComponentDefaultProps";
 
 interface Props {
-  imageSrc?: string;
-  imageAlt?: string;
+  image?: CustomImage;
 }
 
-const defaultProps = {
-  imageSrc: "./assets/EisWaffel-Illustration.webp",
-  imageAlt: "Eis Waffel",
-};
-
-const AnimatedImage: React.FC = ({ imageSrc, imageAlt }: Props) => {
+const AnimatedImage: React.FC = ({ image }: Props) => {
   const { scrollY } = useScroll();
 
   const y = useTransform(scrollY, [0, 580], [0, 580]);
@@ -42,8 +38,8 @@ const AnimatedImage: React.FC = ({ imageSrc, imageAlt }: Props) => {
   return (
     <LazyMotion features={domAnimation}>
       <motion.img
-        src={imageSrc}
-        alt={`${imageAlt} Animation`}
+        src={image?.imageSrc}
+        alt={`${image?.alt} Animation`}
         width={"300"}
         height={"300"}
         whileInView={{ opacity: 1, y: 0, x: 0, rotate: -20 }}
@@ -64,11 +60,11 @@ const AnimatedImage: React.FC = ({ imageSrc, imageAlt }: Props) => {
           damping: 15,
           default: { ease: "linear" },
         }}
-        className="absolute top-0 left-0 object-cover z-50"
+        className="absolute top-0 left-0 object-cover z-50 drop-shadow-2xl"
       />
     </LazyMotion>
   );
 };
 
-AnimatedImage.defaultProps = defaultProps;
+AnimatedImage.defaultProps = AnimatedImageDefaultProps;
 export default AnimatedImage;

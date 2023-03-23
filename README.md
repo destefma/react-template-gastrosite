@@ -2,13 +2,11 @@ This is a Website for Gastro Business. Created with React, Next.js & TailwindCSS
 
 ## Getting Started
 
-First, run the development server:
+npm init -> Initial Project Settings
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+npm install -> Install Dependencies
+
+npm run dev -> Start Local Dev Server
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
